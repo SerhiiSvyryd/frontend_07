@@ -1,18 +1,19 @@
 
-ul,
-li {
+.menu,
+.menu__item {
     display: inline-block; 
-    width: 50px;
-    border: 1px solid black;
     /* Возвращаем в нормальное состояние у потомков */
     font-size: 15px;
    }
 
-ul {
+.menu {
+    width: 30%;
+    padding: 3% 0 0 3%;
     font-size: 0;
 }
 
-li {
-    display: inline-block;
+.menu__item {
+    padding: 1% 0 0 1%;
+    border: 1px solid black;
     font-size: 1rem;
 }
