@@ -10,7 +10,7 @@ body {
    }
 
 .menu {
-    width: 50%;
+    width: 100%;
     padding: 3% 0 0 16%;
     font-size: 0;
 }
@@ -20,9 +20,19 @@ body {
     margin: 1%;
     border: 1px solid black;
     font-size: 1rem;
-    background-color: rgb(69, 213, 175);
+    background-color: rgba(69, 213, 175, 0.4);
+    box-shadow: 0px 2px 40px 0px rgba(69, 213, 175, 0.7); 
+    cursor: pointer;
+    transition: 0.5s ;
+}
+
+.menu__item:hover {
+    background: rgb(69, 213, 175);
 }
 
 .menu__link {
     text-decoration: none;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
+
+
