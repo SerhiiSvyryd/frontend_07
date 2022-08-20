@@ -34,6 +34,39 @@ body {
 .menu__link {
     text-decoration: none;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
 }
 
+.menu__dropdown {
+    position: absolute;
+    visibility: hidden;
+    transform: translateY(20px);
+    transition: 1s;
+}
 
+.menu__item:nth-child(2):hover .menu__dropdown {
+    visibility: visible;
+    transform: translateY(0);
+    transition: 0.3s;
+
+}
+
+.menu__wrapper {
+    width: 73px;
+    padding: 14%;
+    margin-top: 24%;
+    border: 1px solid black;
+    font-size: 1rem;
+    background-color: rgba(69, 213, 175, 0.4);
+    box-shadow: 0px 2px 40px 0px rgba(69, 213, 175, 0.7); 
+    cursor: pointer;
+
+}
+
+.menu__wrapper:nth-child(1) {
+    margin-top: 45%;
+}
+
+.menu__wrapper:hover {
+    background: rgb(69, 213, 175);
+}
