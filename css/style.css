@@ -1,72 +1,103 @@
+/*001*/
+/*добавляю картинку на фон страницы*/
 body {
     background: url(../image/1626745751_3-kartinkin-com-p-svetlii-fon-biznes-krasivo-3.jpg);
 }
 
-.menu,
-.menu__item {
-    display: inline-block; 
-    /* Возвращаем в нормальное состояние у потомков */
-    font-size: 15px;
-   }
-
+/*010*/
+/* Задаем ширину блока меню, позицию*/
 .menu {
     width: 100%;
-    position: absolute;
-    padding: 3% 0 0 16%;
-    font-size: 0;
+    position: absolute; /* абсолютно позиционированный элемент */
+    padding: 3% 0 0 16%;/* внутренние отступы по блоку */
 }
 
+/*010*/
+/* Добавляем свойство блокам, чтобы они выстроились в одну строчку*/
+.menu,
+.menu__item {
+    display: inline-block; /* строчно-блочные элементы*/
+    /* Возвращаем в нормальное состояние у потомков */
+    font-size: 15px;
+}
+
+/*010*/
+/*задаем свойства блокам меню*/
 .menu__item {
     padding: 1%;
     margin: 1%;
     border: 1px solid black;
     font-size: 1rem;
-    background-color: rgba(69, 213, 175, 0.4);
-    box-shadow: 0px 2px 40px 0px rgba(69, 213, 175, 0.7); 
-    cursor: pointer;
-    transition: 0.5s ;
+    background-color: rgba(69, 213, 175, 0.4); /* цвет блока и его прозрачность */
+    box-shadow: 0px 2px 40px 0px rgba(69, 213, 175, 0.7);  /* создаем блоку тень*/
+    cursor: pointer; /* при наведении курсора на блок, курсор изменяется, чтобы дать понять, что на блок можно нажать*/
+    transition: 0.5s ;/* скорость изменения */
 }
 
+/*010*/
+/* закругляем углы для первого и последнего блока */
+.menu__item:nth-child(1) {
+    border-radius: 20px 0 0 20px;
+}
+
+/*010*/
+/* закругляем углы для первого и последнего блока */
+.menu__item:nth-child(5) {
+    border-radius: 0 20px 20px 0;
+}
+
+/*010*/
+/* при наведении курсора на блок прозрачность исчезает*/
 .menu__item:hover {
     background: rgb(69, 213, 175);
 }
 
+/*010*/
+/* задаем шрифт и убираем подчеркивание ссылок*/
 .menu__link {
     text-decoration: none;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; 
 }
 
+/*010*/
+/* делаем выпадающее меню невидимым и задаем время ичесзновения */
 .menu__dropdown {
     position: absolute;
-    visibility: hidden;
-    transform: translateY(20px);
-    transition: 1s;
+    visibility: hidden; /* делаю меню невидимой */
+    transform: translateY(-15px); /* свойство сдвигает элемент по вертикали, отрицательное значение сдвигает вверх */
+    transition: 1s; /* время исчезновения меню после отвода курсора от блока */
 }
 
+/*010*/
+/* при наведении курсора на второй блок выпадающее меню появляется+ время появления */
 .menu__item:nth-child(2):hover .menu__dropdown {
-    visibility: visible;
-    transform: translateY(0);
-    transition: 0.3s;
+    visibility: visible; /* делаем меню видимым если навести курсор */
+    transform: translateY(10px);/*  также сдвигает элемент по вертикали, положительное значение сдвигает вниз и создается эфект падения меню из блока */
+    transition: 0.5s; /* время появления меню после наведения курсора*/
 
 }
 
+/*010*/
+/* задаем параметры выпадающему меню  */
 .menu__wrapper {
     width: 73px;
     padding: 14%;
     margin-top: 24%;
     border: 1px solid black;
     font-size: 1rem;
-    background-color: rgba(69, 213, 175, 0.4);
-    box-shadow: 0px 2px 40px 0px rgba(69, 213, 175, 0.7); 
+    background-color: rgba(69, 213, 175, 0.4); /* прозрачные блоки пока */
+    box-shadow: 0px 2px 40px 0px rgba(69, 213, 175, 0.7);  /* тень блоков */ 
     cursor: pointer;
-
 }
 
+/*010*/
+/* задаем отступ сомому первому блоку из выпадающего меню, чтобы меню была немного ниже, выравниваю */
 .menu__wrapper:nth-child(1) {
     margin-top: 45%;
 }
 
+/*010*/
+/* блоки выпадающего меню теряют прозрачность при наведении на них курсором */
 .menu__wrapper:hover {
     background: rgb(69, 213, 175);
 }
